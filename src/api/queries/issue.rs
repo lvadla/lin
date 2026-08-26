@@ -44,8 +44,13 @@ query Issues($first: Int, $filter: IssueFilter, $orderBy: PaginationOrderBy) {
             projectMilestone {
                 id
                 name
+                description
                 targetDate
+                sortOrder
                 status
+                progress
+                createdAt
+                updatedAt
             }
         }
     }
@@ -92,8 +97,13 @@ query Issue($id: String!) {
         projectMilestone {
             id
             name
+            description
             targetDate
+            sortOrder
             status
+            progress
+            createdAt
+            updatedAt
         }
     }
 }
@@ -143,8 +153,13 @@ query IssueByIdentifier($filter: IssueFilter!) {
             projectMilestone {
                 id
                 name
+                description
                 targetDate
+                sortOrder
                 status
+                progress
+                createdAt
+                updatedAt
             }
         }
     }
